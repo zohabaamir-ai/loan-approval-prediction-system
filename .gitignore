@@ -1,0 +1,38 @@
+# --- secrets / credentials (never commit) ---
+.env
+*.env
+kaggle.json
+*.pem
+*.key
+
+# --- data: Kaggle license not confirmed, so the raw dataset is NOT committed ---
+data/raw/
+data/*.csv
+!data/sample_synthetic.csv
+
+# --- slides / archives (contain student IDs) ---
+*.pptx
+*.zip
+
+# --- trained models (version-tied files are never shipped) ---
+*.pkl
+*.joblib
+*.keras
+*.h5
+*.pt
+
+# --- Python ---
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# --- Notebooks / editor / OS ---
+.ipynb_checkpoints/
+.vscode/
+Thumbs.db
+.DS_Store
