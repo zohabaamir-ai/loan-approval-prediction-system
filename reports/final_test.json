@@ -1,0 +1,98 @@
+{
+  "description": "Held-out test split, scored once. Model and threshold were frozen before.",
+  "seed": 42,
+  "model": "hist_gradient_boosting_no_gender",
+  "threshold": 0.78,
+  "n_train": 35994,
+  "n_test": 8999,
+  "test": {
+    "threshold": 0.78,
+    "precision": 0.9682422451994092,
+    "recall": 0.6555,
+    "f1": 0.7817531305903398,
+    "accuracy": 0.9186576286254028,
+    "tp": 1311,
+    "fp": 43,
+    "fn": 689,
+    "tn": 6956,
+    "roc_auc": 0.9766190884412059
+  },
+  "bootstrap_95ci": {
+    "roc_auc": {
+      "low": 0.9740260899505327,
+      "high": 0.9790564728929321
+    },
+    "precision": {
+      "low": 0.9585562093175294,
+      "high": 0.9770204403810779
+    },
+    "recall": {
+      "low": 0.6344967392527484,
+      "high": 0.6763684105966522
+    },
+    "f1": {
+      "low": 0.7658920589659194,
+      "high": 0.7972680616127742
+    },
+    "accuracy": {
+      "low": 0.9128764307145238,
+      "high": 0.9243249249916657
+    }
+  },
+  "fairness": {
+    "by_gender": {
+      "female": {
+        "n": 4005,
+        "true_approval_rate": 0.21797752808988763,
+        "model_approval_rate": 0.14781523096129837,
+        "recall": 0.6517754868270332,
+        "false_approval_rate": 0.007343550446998723
+      },
+      "male": {
+        "n": 4994,
+        "true_approval_rate": 0.22567080496595915,
+        "model_approval_rate": 0.1525830997196636,
+        "recall": 0.6583850931677019,
+        "false_approval_rate": 0.00517196793379881
+      },
+      "_gaps": {
+        "model_approval_rate_gap": 0.00476786875836524,
+        "recall_gap": 0.00660960634066865
+      }
+    },
+    "by_age_band": {
+      "24 or under": {
+        "n": 3241,
+        "true_approval_rate": 0.24097500771366862,
+        "model_approval_rate": 0.17309472385066338,
+        "recall": 0.7029449423815621,
+        "false_approval_rate": 0.004878048780487805
+      },
+      "25-29": {
+        "n": 3207,
+        "true_approval_rate": 0.2182725288431556,
+        "model_approval_rate": 0.14561895852821952,
+        "recall": 0.6442857142857142,
+        "false_approval_rate": 0.006382130035899481
+      },
+      "30-39": {
+        "n": 2131,
+        "true_approval_rate": 0.1984983575786016,
+        "model_approval_rate": 0.12435476302205538,
+        "recall": 0.6004728132387707,
+        "false_approval_rate": 0.006440281030444965
+      },
+      "40 and over": {
+        "n": 420,
+        "true_approval_rate": 0.22857142857142856,
+        "model_approval_rate": 0.14523809523809525,
+        "recall": 0.59375,
+        "false_approval_rate": 0.012345679012345678
+      },
+      "_gaps": {
+        "model_approval_rate_gap": 0.048739960828608,
+        "recall_gap": 0.10919494238156213
+      }
+    }
+  }
+}
